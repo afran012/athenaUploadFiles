@@ -1,5 +1,3 @@
-# Extracci�n de datos de PostgreSQL
-
 # src/spatial_migration/core/extractor.py
 from typing import Optional
 import geopandas as gpd
