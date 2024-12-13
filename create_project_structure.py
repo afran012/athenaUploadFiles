@@ -147,5 +147,5 @@ def create_structure(base_path, structure):
             with open(path, "w") as f:
                 f.write(content)
 
-base_path = "/c:/Users/Steev/Documents/gaia/athena"
+base_path = r"C:\Users\Steev\Documents\AiranFranco\sisc\athena"
 create_structure(base_path, structure)

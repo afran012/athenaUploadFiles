@@ -1,0 +1,1 @@
+# Script para configuración de la base de datos
