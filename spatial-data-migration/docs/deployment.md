@@ -1,1 +1,53 @@
-# Gu韆 de despliegue
+# Gu铆a de Despliegue
+
+## Requisitos Previos
+
+### Software
+- Python 3.9+
+- PostgreSQL con PostGIS
+- AWS CLI configurado
+- Poetry
+
+### Credenciales
+- Acceso a PostgreSQL
+- Credenciales de AWS con permisos para:
+  - S3
+  - Glue
+  - Athena
+
+## Pasos de Instalaci贸n
+
+1. **Preparaci贸n del Entorno**
+   ```bash
+   git clone https://github.com/your-org/spatial-data-migration
+   cd spatial-data-migration
+   poetry install
+   ```
+
+2. **Configuraci贸n**
+   ```bash
+   cp .env.example .env
+   # Editar .env con las credenciales correspondientes
+   ```
+
+3. **Configuraci贸n de AWS**
+   ```bash
+   ./scripts/setup_aws.sh
+   ```
+
+4. **Configuraci贸n de Base de Datos**
+   ```bash
+   ./scripts/setup_database.sh
+   ```
+
+## Verificaci贸n del Despliegue
+
+1. **Pruebas B谩sicas**
+   ```bash
+   poetry run pytest
+   ```
+
+2. **Migraci贸n de Prueba**
+   ```bash
+   poetry run python examples/basic_migration.py
+   ```
